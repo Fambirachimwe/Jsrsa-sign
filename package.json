@@ -1,0 +1,28 @@
+{
+  "name": "swProtection",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "server-debug": "nodemon --inspect server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.2",
+    "cors": "^2.8.5",
+    "create-react-app": "^5.0.0",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "jsrsasign": "^10.5.6",
+    "jsrsasign-util": "^1.0.5",
+    "mongoose": "^6.2.1",
+    "nodemon": "^2.0.15"
+  },
+  "engines": {
+    "node": "15.x"
+  }
+}
