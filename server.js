@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
@@ -19,7 +20,7 @@ let privateKey
 let publicKey;
 
 
-mongoose.connect('mongodb://localhost:27017/Jsrasa').then( async () => {
+mongoose.connect(process.env.MONGODB_CONNECTION).then( async () => {
     console.log('connected to the database');
     await loaKeys();
     
@@ -49,7 +50,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
 
 
-const PORT = 3333;
+const PORT = process.env.PORT || 3333;
 // const HTTPS_PORT = 4444;
 
 const loaKeys = async () => {
