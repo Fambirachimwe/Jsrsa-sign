@@ -1,6 +1,6 @@
 
 
-fetch("http://localhost:3333/publickey", {
+fetch("https://morning-badlands-59571.herokuapp.com/publickey", {
     method: "GET"
 }).then(data => data.json())
     .then(response => {
