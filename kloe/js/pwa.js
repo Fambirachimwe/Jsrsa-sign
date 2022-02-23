@@ -24,7 +24,7 @@ const verify = (publicKey, signature, data) => {
         // alert("valid ECDSA signature");
         console.log(result)
     } else {
-        alert("invalid ECDSA signature");
+        window.location.replace("https://morning-badlands-59571.herokuapp.com/404.html");;
 
         // here terminate the users session
         // and redirect to a 404 page
