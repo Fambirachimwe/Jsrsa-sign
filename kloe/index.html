@@ -7,6 +7,23 @@
   <script src="./js/jsrsasign-all-min.js"></script>
     <script src="./js/sw-get-headers/swgetheaders-page.js"></script>
     <script src="./js/loadkeys.js"></script>
+    <script src="./js/pwa.js"></script>
+    <script>
+
+        fetch('https://morning-badlands-59571.herokuapp.com/data', {
+            method: "GET"
+        })
+        .then(data => data.json())
+        .then(response => {
+                var content = document.getElementById('data');
+                content.innerHTML = response.data
+            }
+        )
+        .catch(err => {
+            console.log(err)
+        })
+
+    </script>
 </head>
 <body  class="font-body">
 
@@ -136,23 +153,7 @@
     </main>
   </div>
 
-  <script src="./js/pwa.js"></script>
-    <script>
-
-        fetch('https://morning-badlands-59571.herokuapp.com/data', {
-            method: "GET"
-        })
-        .then(data => data.json())
-        .then(response => {
-                var content = document.getElementById('data');
-                content.innerHTML = response.data
-            }
-        )
-        .catch(err => {
-            console.log(err)
-        })
-
-    </script>
+  
 
 </body>
 </html>
